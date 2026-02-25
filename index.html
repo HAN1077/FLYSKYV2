@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fly Sky Printing | Bangi Selangor</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
 <style>
 *{
 margin:0;
@@ -14,12 +13,10 @@ box-sizing:border-box;
 font-family:Poppins,sans-serif;
 scroll-behavior:smooth;
 }
-
 body{
-background:#0f0f0f;
+background:#333333;
 color:white;
 }
-
 header{
 background:black;
 padding:15px 8%;
@@ -29,19 +26,16 @@ align-items:center;
 position:sticky;
 top:0;
 z-index:1000;
-border-bottom:2px solid #ff2d2d;
+border-bottom:2px solid #007bff;
 }
-
 header h1{
-color:#ff2d2d;
+color:#007bff;
 }
-
 .cart-btn{
-background:#ff2d2d;
+background:#007bff;
 padding:8px 15px;
 border-radius:20px;
 }
-
 .hero{
 height:85vh;
 display:flex;
@@ -55,34 +49,28 @@ background-size:cover;
 background-position:center;
 transition: background 1s ease-in-out;
 }
-
 .hero h2{
 font-size:60px;
-color:#ff2d2d;
+color:#007bff;
 }
-
 .hero p{
 margin-top:15px;
 color:#ccc;
 }
-
 section{
 padding:80px 8%;
 }
-
 h2{
 text-align:center;
 margin-bottom:40px;
-color:#ff2d2d;
+color:#007bff;
 font-size:32px;
 }
-
 .products,.materials{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
-
 .card{
 background:#1a1a1a;
 padding:25px;
@@ -91,17 +79,14 @@ transition:0.6s;
 opacity:0;
 transform:translateY(40px);
 }
-
 .card.show{
 opacity:1;
 transform:translateY(0);
 }
-
 .card:hover{
 transform:translateY(-10px);
-box-shadow:0 0 25px rgba(255,0,0,0.6);
+box-shadow:0 0 25px rgba(0,123,255,0.6);
 }
-
 .card img{
 width:100%;
 height:180px;
@@ -109,29 +94,25 @@ object-fit:cover;
 border-radius:10px;
 margin-bottom:15px;
 }
-
 button{
 padding:8px 15px;
 margin-top:10px;
 border:none;
 border-radius:20px;
-background:#ff2d2d;
+background:#007bff;
 color:white;
 cursor:pointer;
 font-weight:600;
 }
-
 button:hover{
 background:white;
-color:#ff2d2d;
+color:#007bff;
 }
-
 .cart{
 background:#1a1a1a;
 padding:30px;
 border-radius:15px;
 }
-
 input{
 width:100%;
 padding:10px;
@@ -139,13 +120,11 @@ margin:10px 0;
 border-radius:8px;
 border:none;
 }
-
 .total{
 font-size:22px;
-color:#ff2d2d;
+color:#007bff;
 margin-top:10px;
 }
-
 .whatsapp-float{
 position:fixed;
 bottom:25px;
@@ -159,25 +138,21 @@ text-decoration:none;
 z-index:9999;
 transition:0.3s;
 }
-
 .whatsapp-float:hover{
 transform:scale(1.1);
 background:#1ebe5d;
 }
-
 footer{
 background:black;
 padding:25px;
 text-align:center;
 color:#aaa;
 }
-
 iframe{
 width:100%;
 height:300px;
 border-radius:15px;
 }
-
 /* ===== MATERIAL POPUP ===== */
 .modal{
 display:none;
@@ -191,7 +166,6 @@ background:rgba(0,0,0,0.85);
 justify-content:center;
 align-items:center;
 }
-
 .modal-box{
 background:#1c1c1c;
 padding:25px;
@@ -200,12 +174,10 @@ width:90%;
 max-width:520px;
 animation:pop 0.3s ease;
 }
-
 .modal-box h3{
-color:#ff2d2d;
+color:#007bff;
 margin-bottom:15px;
 }
-
 .material-row{
 background:#222;
 padding:12px;
@@ -215,38 +187,83 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 }
-
 .material-row a{
 font-size:12px;
 color:cyan;
 text-decoration:none;
 }
-
 .close-modal{
 background:#444;
 width:100%;
 margin-top:10px;
 }
-
 @keyframes pop{
 from{transform:scale(0.8);opacity:0;}
 to{transform:scale(1);opacity:1;}
 }
+/* Product Range Styles */
+.product-range-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    height: 250px;
+    font-size: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+.product-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.product-description {
+    font-size: 12px;
+    margin-top: 5px;
+}
+/* Cycle through colors */
+.product-item:nth-child(1) { background-color: #F44336; } /* Red */
+.product-item:nth-child(2) { background-color: #FF9800; } /* Orange */
+.product-item:nth-child(3) { background-color: #009688; } /* Teal */
+.product-item:nth-child(4) { background-color: #2196F3; } /* Blue */
+.product-item:nth-child(5) { background-color: #9C27B0; } /* Purple */
+.product-item:nth-child(6) { background-color: #FF9800; } /* Orange */
+.product-item:nth-child(7) { background-color: #2196F3; } /* Blue */
+.product-item:nth-child(8) { background-color: #2196F3; } /* Blue */
+.product-item:nth-child(9) { background-color: #9C27B0; } /* Purple */
+.product-item:nth-child(10) { background-color: #F44336; } /* Red */
+.product-item:nth-child(11) { background-color: #FF9800; } /* Orange */
+.product-item:nth-child(12) { background-color: #8BC34A; } /* Light Green */
+.product-item:nth-child(13) { background-color: #607D8B; } /* Gray */
+.product-item:nth-child(14) { background-color: #FFEB3B; } /* Yellow */
+.product-item:nth-child(15) { background-color: #795548; } /* Brown */
+.product-item:nth-child(16) { background-color: #E91E63; } /* Pink */
 </style>
 </head>
-
 <body>
-
 <header>
 <h1>Fly Sky Printing</h1>
-<div class="cart-btn">🛒 (<span id="cartCount">0</span>)</div>
+<div class="cart-btn" onclick="document.getElementById('checkout').scrollIntoView({behavior: 'smooth'});">🛒 (<span id="cartCount">0</span>)</div>
 </header>
-
 <div class="hero">
 <h2>Premium Printing & Corporate Gifts</h2>
 <p>Based in Bangi, Selangor • Since 2024</p>
 </div>
-
 <section>
 <h2>About Company</h2>
 <div class="card">
@@ -262,50 +279,122 @@ for corporate, school and organization orders across Malaysia.
 </p>
 </div>
 </section>
-
 <section>
 <h2>Our Products</h2>
 <div class="products">
-
 <div class="card">
 <h3>T-Shirt Printing</h3>
-<p>Event shirts, company uniform & streetwear merch.</p>
-<button onclick="openMaterial('tshirt')">Start RM26</button>
+<img src="https://www.printingnewyork.com/wp-content/uploads/custom-printing-t-shirts-nyc-2.jpg" alt="T-Shirt Printing">
+<p></p>
+<button onclick="openMaterial('tshirt')">View Options</button>
 </div>
-
 <div class="card">
 <h3>Sticker Printing</h3>
-<p>Waterproof, glossy, transparent & die-cut.</p>
-<button onclick="openMaterial('sticker')">Start RM15</button>
+<img src="https://m.media-amazon.com/images/I/61B2WATONOL._AC_UF894,1000_QL80_.jpg" alt="Sticker Printing">
+<p></p>
+<button onclick="openMaterial('sticker')">View Options</button>
 </div>
-
 <div class="card">
 <h3>Business Card</h3>
-<p>Premium artcard, spot UV & embossed.</p>
-<button onclick="openMaterial('businesscard')">Start RM45</button>
+<img src="https://rlv.zcache.com/svc/getimage?id=5d6f0bbf-acee-4c49-b0e5-2f2dad2c8b21&max_dim=1290&image_type=webp" alt="Business Card">
+<p></p>
+<button onclick="openMaterial('businesscard')">View Options</button>
 </div>
-
 <div class="card">
 <h3>Banner & Bunting</h3>
-<p>Tarpaulin, roll-up, backdrop stand.</p>
-<button onclick="openMaterial('banner')">Start RM50</button>
+<img src="https://cdn-yotpo-images-production.yotpo.com/Review/656397443/639000484/original.jpg?1733306241" alt="Banner & Bunting">
+<p></p>
+<button onclick="openMaterial('banner')">View Options</button>
 </div>
-
 <div class="card">
 <h3>Corporate Gifts</h3>
-<p>Mug, lanyard, plaque crystal, notebook.</p>
-<button onclick="openMaterial('gift')">Start RM5</button>
+<img src="https://www.southernliving.com/thmb/n782I3JqRIChVks21I2ytOoc-gU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/the-best-personalized-gifts-tout-bb979f07d8264d498e412cb5a545f095.jpg" alt="Corporate Gifts">
+<p></p>
+<button onclick="openMaterial('gift')">View Options</button>
 </div>
-
 <div class="card">
-<h3>Booklet & Printing</h3>
-<p>Softcover, hardcover, thesis binding.</p>
-<button onclick="openMaterial('booklet')">Start RM15</button>
+<h3>Lanyard</h3>
+<img src="https://files.catbox.moe/jvt50m.jpeg" alt="Lanyard">
+<p></p>
+<button onclick="openMaterial('lanyard')">View Options</button>
 </div>
-
 </div>
 </section>
-
+<section id="product-range">
+<h2>Product Range</h2>
+<div class="product-range-grid">
+<div class="product-item" onclick="showImages('Drinkwares')">
+<div class="product-icon">🥤</div>
+Drinkwares
+<p class="product-description">Drinkware products, e.g., VERO VERO MUG with Thermos (keep warm function) - 530ml, 3 Ring Stainless Steel Mug (400ml), Glass Mug with Straw - 400ml.</p>
+</div>
+<div class="product-item" onclick="showImages('Memo Pad')">
+<div class="product-icon">📝</div>
+Memo Pad
+<p class="product-description">Memo pads, e.g., Large Luna Notepad, Wavy Notepad.</p>
+</div>
+<div class="product-item" onclick="showImages('Notepads & Diary')">
+<div class="product-icon">📓</div>
+Notepads & Diary
+<p class="product-description">Notepads and diaries, e.g., A5 Diary Set 2 with Pen.</p>
+</div>
+<div class="product-item" onclick="showImages('Pens')">
+<div class="product-icon">✒️</div>
+Pens
+<p class="product-description">Writing pens, e.g., Slim Stylus Pen.</p>
+</div>
+<div class="product-item" onclick="showImages('Canvas Bags')">
+<div class="product-icon">🛍️</div>
+Canvas Bags
+<p class="product-description">Bags made from canvas, e.g., Laminated Canvas Bag 10oz, Laminated Canvas Bag, ECO Canvas Bag 5.</p>
+</div>
+<div class="product-item" onclick="showImages('Jute Bags')">
+<div class="product-icon">🛍️</div>
+Jute Bags
+<p class="product-description">Bags made from jute, e.g., ES4352 Jute Bag.</p>
+</div>
+<div class="product-item" onclick="showImages('Non Woven & Nylon Bags')">
+<div class="product-icon">🛍️</div>
+Non Woven & Nylon Bags
+<p class="product-description">Bags made from non-woven or nylon materials.</p>
+</div>
+<div class="product-item" onclick="showImages('Bags & Car Boot Organizer')">
+<div class="product-icon">🛍️</div>
+Bags & Car Boot Organizer
+<p class="product-description">Various bags and car boot organizers.</p>
+</div>
+<div class="product-item" onclick="showImages('Keyholders')">
+<div class="product-icon">🔑</div>
+Keyholders
+<p class="product-description">Items for holding keys.</p>
+</div>
+<div class="product-item" onclick="showImages('Umbrellas')">
+<div class="product-icon">☂️</div>
+Umbrellas
+<p class="product-description">Umbrella products.</p>
+</div>
+<div class="product-item" onclick="showImages('Lanyards')">
+<div class="product-icon">🏷️</div>
+Lanyards
+<p class="product-description">Lanyard products.</p>
+</div>
+<div class="product-item" onclick="showImages('Caps, Vests & Ties')">
+<div class="product-icon">🧢</div>
+Caps, Vests & Ties
+<p class="product-description">Headwear, vests, and ties.</p>
+</div>
+<div class="product-item" onclick="showImages('Ready Made T-Shirts')">
+<div class="product-icon">👕</div>
+Ready Made T-Shirts
+<p class="product-description">Pre-made t-shirts.</p>
+</div>
+<div class="product-item" onclick="showImages('Made To Order')">
+<div class="product-icon">🏭</div>
+Made To Order
+<p class="product-description">Custom products made to order.</p>
+</div>
+</div>
+</section>
 <section>
 <h2>Testimonials</h2>
 <div class="card">
@@ -314,7 +403,6 @@ for corporate, school and organization orders across Malaysia.
 <p>— Ahmad, Bangi</p>
 </div>
 </section>
-
 <section>
 <h2>FAQ</h2>
 <div class="card">
@@ -325,13 +413,11 @@ for corporate, school and organization orders across Malaysia.
 <p>Usually 2-5 working days depending on quantity.</p>
 </div>
 </section>
-
 <section>
 <h2>Our Location</h2>
 <iframe src="https://maps.google.com/maps?q=Bangi%20Selangor&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
 </section>
-
-<section>
+<section id="checkout">
 <div class="cart">
 <h2>Checkout</h2>
 <div id="cartItems"></div>
@@ -341,17 +427,14 @@ for corporate, school and organization orders across Malaysia.
 <button onclick="checkout()">Confirm Order via WhatsApp</button>
 </div>
 </section>
-
 <footer>
 📍 Bangi, Selangor | 📞 014-2200493 <br>
 © 2026 Fly Sky Printing
 </footer>
-
 <a href="https://wa.me/60142200493?text=Hi%20Fly%20Sky%20Printing,%20I%20want%20more%20info."
 class="whatsapp-float" target="_blank">
 💬 WhatsApp
 </a>
-
 <!-- MATERIAL POPUP -->
 <div class="modal" id="materialModal">
 <div class="modal-box">
@@ -360,10 +443,16 @@ class="whatsapp-float" target="_blank">
 <button class="close-modal" onclick="closeMaterial()">Close</button>
 </div>
 </div>
-
+<!-- IMAGE POPUP -->
+<div class="modal" id="imageModal">
+<div class="modal-box" style="max-width:300px; max-height:80vh; overflow-y:auto;">
+<h3>Sample Images</h3>
+<div id="imageContent"></div>
+<button class="close-modal" onclick="closeImageModal()">Close</button>
+</div>
+</div>
 <script>
 let cart=[];
-
 // ===== CART FUNCTIONS =====
 function addToCart(product,price){
 let exist=cart.find(i=>i.product===product);
@@ -371,7 +460,6 @@ if(exist){exist.qty++;}
 else{cart.push({product,price,qty:1});}
 updateCart();
 }
-
 function changeQty(product,val){
 let item=cart.find(i=>i.product===product);
 if(!item)return;
@@ -379,7 +467,6 @@ item.qty+=val;
 if(item.qty<=0){cart=cart.filter(i=>i.product!==product);}
 updateCart();
 }
-
 function updateCart(){
 let total=0;
 let html="";
@@ -394,103 +481,81 @@ Qty: ${item.qty} | RM${sub}
 <hr>
 `;
 });
-
 let discount=0;
 if(total>=500){discount=total*0.1;}
 else if(total>=300){discount=total*0.05;}
-
 let finalTotal=total-discount;
-
 if(discount>0){
 html+=`<p style="color:lime;">Bulk Discount: -RM${discount.toFixed(2)}</p>`;
 }
-
 document.getElementById("cartItems").innerHTML=html;
 document.getElementById("total").innerText=finalTotal.toFixed(2);
 document.getElementById("cartCount").innerText=
 cart.reduce((a,b)=>a+b.qty,0);
 }
-
 function checkout(){
 if(cart.length===0){alert("Cart kosong!");return;}
-
 let name=document.getElementById("name").value;
 let phone=document.getElementById("phone").value;
 let total=document.getElementById("total").innerText;
 let items=cart.map(i=>`${i.product} (${i.qty})`).join(", ");
-
 let message=`Hi Fly Sky Printing,%0AName: ${name}%0APhone: ${phone}%0AOrder: ${items}%0ATotal: RM${total}`;
-
 window.open(`https://wa.me/60142200493?text=${message}`);
 }
-
 // ===== POPUP MATERIAL FUNCTIONS =====
 function openMaterial(type){
-
 let market = {
-
 tshirt:[
-{n:"Cotton 100%",p:26,l:"https://www.google.com/search?q=cotton+tshirt+printing"},
-{n:"Microfiber Sport",p:30,l:"https://www.google.com/search?q=microfiber+tshirt+printing"},
-{n:"Oversize Premium",p:38,l:"https://www.google.com/search?q=oversize+tshirt+printing+malaysia"}
+{n:"Cotton",l:"https://www.google.com/search?q=cotton+tshirt+printing+malaysia&tbm=isch"},
+{n:"Jersey",l:"https://www.google.com/search?q=jersey+tshirt+printing+malaysia&tbm=isch"},
+{n:"Korporat",l:"https://www.google.com/search?q=korporat+tshirt+printing+malaysia&tbm=isch"},
+{n:"Polo",l:"https://www.google.com/search?q=polo+tshirt+printing+malaysia&tbm=isch"}
 ],
-
 sticker:[
-{n:"Mirrorcoat",p:15,l:"https://www.google.com/search?q=mirrorcoat+sticker+printing"},
-{n:"PVC Waterproof",p:20,l:"https://www.google.com/search?q=pvc+sticker+waterproof"},
-{n:"Transparent Clear",p:23,l:"https://www.google.com/search?q=transparent+sticker+printing"}
+{n:"PVC",l:"https://www.google.com/search?q=pvc+sticker+printing+malaysia&tbm=isch"},
+{n:"Mirrorcote",l:"https://www.google.com/search?q=mirrorcote+sticker+printing+malaysia&tbm=isch"},
+{n:"UV Sticker",l:"https://www.google.com/search?q=uv+sticker+printing+malaysia&tbm=isch"}
 ],
-
 businesscard:[
-{n:"260gsm Artcard",p:45,l:"https://www.google.com/search?q=260gsm+business+card"},
-{n:"310gsm Premium",p:55,l:"https://www.google.com/search?q=310gsm+business+card"},
-{n:"Spot UV Finishing",p:75,l:"https://www.google.com/search?q=spot+uv+business+card"}
+{n:"Artcard",l:"https://www.google.com/search?q=artcard+business+card+printing+malaysia&tbm=isch"},
+{n:"Ivory",l:"https://www.google.com/search?q=ivory+business+card+printing+malaysia&tbm=isch"},
+{n:"Laminated",l:"https://www.google.com/search?q=laminated+business+card+printing+malaysia&tbm=isch"},
+{n:"Lain-lain",l:"https://www.google.com/search?q=business+card+printing+malaysia&tbm=isch"}
 ],
-
 banner:[
-{n:"Tarpaulin 380gsm",p:50,l:"https://www.google.com/search?q=tarpaulin+banner+printing"},
-{n:"Backdrop Stand",p:120,l:"https://www.google.com/search?q=backdrop+stand+printing"},
+{n:"Tarpaulin Material",l:"https://www.google.com/search?q=tarpaulin+banner+printing+malaysia&tbm=isch"},
+{n:"Rollup Bunting",l:"https://www.google.com/search?q=rollup+bunting+printing+malaysia&tbm=isch"},
+{n:"Bunting PVC",l:"https://www.google.com/search?q=pvc+bunting+printing+malaysia&tbm=isch"}
 ],
-
 gift:[
-{n:"Custom Mug",p:18,l:"https://www.google.com/search?q=custom+mug+printing"},
-{n:"Lanyard Polyester",p:5,l:"https://www.google.com/search?q=custom+lanyard+printing"},
+{n:"Mug",l:"https://www.google.com/search?q=mug+printing+malaysia&tbm=isch"},
+{n:"Hand Fan",l:"https://www.google.com/search?q=hand+fan+printing+malaysia&tbm=isch"},
+{n:"Electric Hand Fan",l:"https://www.google.com/search?q=electric+hand+fan+printing+malaysia&tbm=isch"}
 ],
-
-booklet:[
-{n:"A4 Softcover",p:15,l:"https://www.google.com/search?q=a4+booklet+printing"},
-{n:"Hardcover Binding",p:35,l:"https://www.google.com/search?q=hardcover+thesis+binding"},
+lanyard:[
+{n:"Custom Lanyard",l:"https://www.google.com/search?q=custom+lanyard+printing+malaysia&tbm=isch"},
+{n:"Ready Made Lanyard",l:"https://www.google.com/search?q=ready+made+lanyard+printing+malaysia&tbm=isch"},
+{n:"Plastic Holder",l:"https://www.google.com/search?q=plastic+holder+lanyard+printing+malaysia&tbm=isch"},
+{n:"Tagging",l:"https://www.google.com/search?q=tagging+lanyard+printing+malaysia&tbm=isch"}
 ]
-
 };
-
 let html="";
 market[type].forEach(item=>{
 html+=`
 <div class="material-row">
 <div>
 <b>${item.n}</b><br>
-RM${item.p}<br>
 <a href="${item.l}" target="_blank">View Sample</a>
 </div>
-<button onclick="selectMaterial('${item.n}',${item.p})">Add</button>
 </div>
 `;
 });
-
 document.getElementById("materialContent").innerHTML=html;
 document.getElementById("materialModal").style.display="flex";
 }
-
-function selectMaterial(name,price){
-addToCart(name,price);
-closeMaterial();
-}
-
 function closeMaterial(){
 document.getElementById("materialModal").style.display="none";
 }
-
 // ===== SCROLL ANIMATION =====
 window.addEventListener("scroll",()=>{
 document.querySelectorAll(".card").forEach(card=>{
@@ -499,26 +564,105 @@ card.classList.add("show");
 }
 });
 });
-
 // ===== HERO SLIDESHOW =====
 const hero = document.querySelector('.hero');
 const heroImages = [
-  'https://images.unsplash.com/photo-1593642634443-44adaa06623a?auto=format&fit=crop&w=1600&q=80', // printing machine
-  'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da', // asal
-  'https://images.unsplash.com/photo-1581091870625-d3e8a1d5b97e', // printer close-up
-  'https://images.unsplash.com/photo-1612197521113-0a6fa21c8c8f', // colorful prints
+  'https://printify.com/wp-content/uploads/2025/05/How-to-create-t-shirts-with-Printify-1024x768.png',
+  'https://storage.googleapis.com/sm-content/core/products/products/sticker-samples/mobileCover',
+  'https://www.printingforless.com/site/wp-content/uploads/2021/12/Banner-Samples.jpg',
+  'https://cms.cloudinary.vpsvc.com/images/c_scale,dpr_auto,f_auto,w_1920/legacy_dam/en-us/S001791580/MXP31898-L1-Promo-CAT-Page-Hero-Banner-001'
 ];
-
 let currentHero = 0;
-
 function changeHero(){
   currentHero = (currentHero + 1) % heroImages.length;
   hero.style.background = `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('${heroImages[currentHero]}') center/cover no-repeat`;
 }
-
 // Tukar gambar setiap 5 saat
 setInterval(changeHero, 5000);
+// ===== IMAGE POPUP FUNCTIONS =====
+const productImages = {
+  'Drinkwares': [
+    'https://maxconcept.com.my/resources/product/3/image.jpg',
+    'https://maxconcept.com.my/resources/product/744/image.jpg',
+    'https://www.flashbay.com/images/products/aqualok_infuse/aqualok_infuse0_us.jpg'
+  ],
+  'Memo Pad': [
+    'https://maxconcept.com.my/resources/product/97/image.jpg',
+    'https://maxconcept.com.my/resources/product/97/gallery/1.jpg',
+    'https://www.xp-pen.com/uploads/blog/2024/12/digital-artist-desk-setup.jpg'
+  ],
+  'Notepads & Diary': [
+    'https://cdn1.npcdn.net/images/2b16705ca3a1123fc91cd5dd8cff2b5a_1687232782.webp',
+    'https://cdn1.npcdn.net/images/16301568697a437eec7a4c7ea7a2334e73443a58fa.webp',
+    'https://cdn1.npcdn.net/images/660ca0c7621498dbc2950e67d25593b6_1687232782.webp'
+  ],
+  'Pens': [
+    'https://maxconcept.com.my/resources/product/164/image.jpg',
+    'https://cdn.shopify.com/s/files/1/0046/3421/4518/files/IMG_3461_1024x1024.jpg',
+    'https://www.gravitaspens.com/cdn/shop/files/gravitas-the-monster-teal-fountain-pen-kraken-filling-system-irish-design.png'
+  ],
+  'Canvas Bags': [
+    'https://maxconcept.com.my/resources/product/94/image.jpg',
+    'https://i.ebayimg.com/00/s/OTUxWDE2MDA=/z/O7kAAOSwGUBaKiBK/$_57.JPG',
+    'https://maxconcept.com.my/resources/product/94/gallery/1.jpg'
+  ],
+  'Jute Bags': [
+    'https://maxconcept.com.my/resources/product/21/image.jpg',
+    'https://www.magspremiums.com/wp-content/uploads/2023/07/jute-bag-malaysia.jpeg',
+    'https://maxconcept.com.my/resources/product/21/gallery/1.jpg'
+  ],
+  'Non Woven & Nylon Bags': [
+    'https://maxconcept.com.my/resources/product/23/image.jpg',
+    'https://maxconcept.com.my/resources/product/192/image.jpg',
+    'https://maxconcept.com.my/resources/product/201/image.jpg'
+  ],
+  'Bags & Car Boot Organizer': [
+    'https://maxconcept.com.my/resources/product/25/image.jpg',
+    'https://maxconcept.com.my/resources/product/224/image.jpg',
+    'https://maxconcept.com.my/resources/product/227/image.jpg'
+  ],
+  'Keyholders': [
+    'https://maxconcept.com.my/resources/product/27/image.jpg',
+    'https://maxconcept.com.my/resources/product/239/image.jpg',
+    'https://maxconcept.com.my/resources/product/27/gallery/1.jpg'
+  ],
+  'Umbrellas': [
+    'https://maxconcept.com.my/resources/product/45/image.jpg',
+    'https://vulcanpost.com/wp-content/uploads/2023/12/payunglah-umbrella-sharing-service-malaysia-1.png',
+    'https://www.shutterstock.com/shutterstock/photos/1857138967/display_1500/stock-photo-beach-chair-with-flag-of-france-and-large-umbrella-travel-or-vacation-concepts-d-rendering-1857138967.jpg'
+  ],
+  'Lanyards': [
+    'https://maxconcept.com.my/resources/product/56/image.jpg',
+    'https://static.flashbay.com/images/products/Access/Access0.jpg',
+    'https://www.rafflestag.com.my/_next/image?url=https%3A%2F%2Fbackend.rafflestag-australia.com%2Fupload%2Fproduct_styles%2Fcross-body1747673911.webp&w=1080&q=100'
+  ],
+  'Caps, Vests & Ties': [
+    'https://maxconcept.com.my/resources/product/58/image.jpg',
+    'https://i.ebayimg.com/images/g/R5wAAOSwJg1juqL5/s-l1600.jpg',
+    'https://www.cripedistributing.com/cdn/shop/files/IMG_0890_1.jpg'
+  ],
+  'Ready Made T-Shirts': [
+    'https://maxconcept.com.my/resources/product/59/image.jpg',
+    'https://mgoofashion.com/wp-content/uploads/2023/05/Choose-The-Best-Types-Of-T-Shirts-To-Build-A-Successful-Clothing-Brand.webp',
+    'https://maxconcept.com.my/resources/product/59/gallery/1.jpg'
+  ],
+  'Made To Order': [
+    'https://maxconcept.com.my/resources/product/85/image.jpg',
+    'https://tucokids.com/cdn/shop/articles/Firecracker_Safety_Tips_for_Children_What_s_Safe_What_s_Not_and_How_to_Supervise.jpg',
+    'https://tucokids.com/cdn/shop/articles/50_bce0b374-e624-4309-83bf-56cadb2496c3.webp'
+  ]
+};
+function showImages(category) {
+  let html = '';
+  productImages[category].forEach(url => {
+    html += `<img src="${url}" style="width:100%; margin-bottom:10px; border-radius:10px;">`;
+  });
+  document.getElementById("imageContent").innerHTML = html;
+  document.getElementById("imageModal").style.display = "flex";
+}
+function closeImageModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
 </script>
-
 </body>
 </html>
